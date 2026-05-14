@@ -295,6 +295,10 @@ Wrong.
 Correct:
 
 StringBuilder sb = new StringBuilder("hello");
+
+//////////////////////////////////////////////////////////////////////////////////////////
+/// 
+/// 
 same way more clear string buffer also explain all methods
 StringBuffer in Java
 
@@ -593,3 +597,4 @@ StringBuilder/StringBuffer → can modify same object
 
 That is the core concept.
  */
+

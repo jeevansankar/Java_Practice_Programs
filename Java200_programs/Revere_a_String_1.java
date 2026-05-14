@@ -12,6 +12,7 @@ public class Revere_a_String_1 {
         
         }
         System.out.println(rev);
+         System.out.println(s.lastIndexOf('o'));
 
 
     }
