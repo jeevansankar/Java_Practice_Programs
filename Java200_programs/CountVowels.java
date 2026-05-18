@@ -1,6 +1,6 @@
 package Java200_programs;
 //9. Count Vowels in String
-public class CountOwels {
+public class CountVowels {
     public static void main(String[] args) {
         
     
@@ -10,7 +10,6 @@ public class CountOwels {
     
     for(int i=0; i <s.length(); i++){
        char ch=s.charAt(i);
-
         if( ch=='a'|| 
             ch=='e'|| 
             ch=='i'||
@@ -18,8 +17,11 @@ public class CountOwels {
             ch=='u'){
                 count ++;
         }
-
     }
+    System.out.println(count);
+    // another way to count vowels
+
+
     System.out.println(count);
     
 }
