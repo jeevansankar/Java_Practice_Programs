@@ -1,0 +1,179 @@
+Identity Matrix
+
+An identity matrix:
+
+diagonal elements = 1
+all other elements = 0
+
+Example:
+
+1 0 0
+0 1 0
+0 0 1
+
+Important:
+
+must be square matrix
+rows = columns
+
+Logic:
+
+if(i == j)
+    print 1
+else
+    print 0
+
+Program:
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int size = 4;
+
+        int[][] arr = new int[size][size];
+
+        for(int i=0; i<size; i++){
+
+            for(int j=0; j<size; j++){
+
+                if(i == j){
+
+                    arr[i][j] = 1;
+
+                }else{
+
+                    arr[i][j] = 0;
+                }
+            }
+        }
+
+        for(int i=0; i<size; i++){
+
+            for(int j=0; j<size; j++){
+
+                System.out.print(arr[i][j] + " ");
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+Output:
+
+1 0 0 0
+0 1 0 0
+0 0 1 0
+0 0 0 1
+Check Identity Matrix
+public class Main {
+
+    public static void main(String[] args) {
+
+        int[][] arr = {
+                {1,0,0},
+                {0,1,0},
+                {0,0,1}
+        };
+
+        boolean identity = true;
+
+        for(int i=0; i<arr.length; i++){
+
+            for(int j=0; j<arr[i].length; j++){
+
+                if(i == j && arr[i][j] != 1){
+
+                    identity = false;
+                }
+
+                if(i != j && arr[i][j] != 0){
+
+                    identity = false;
+                }
+            }
+        }
+
+        System.out.println(identity ? "Identity Matrix" : "Not Identity");
+    }
+}
+Sparse Matrix
+
+Sparse matrix means:
+
+most elements are 0
+
+Example:
+
+0 0 3
+0 0 0
+4 0 0
+
+Here:
+
+zero count is high
+non-zero count is low
+
+Condition usually:
+
+zero count > non-zero count
+
+Program:
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int[][] arr = {
+                {0,0,3},
+                {0,0,0},
+                {4,0,0}
+        };
+
+        int zeroCount = 0;
+        int nonZeroCount = 0;
+
+        for(int i=0; i<arr.length; i++){
+
+            for(int j=0; j<arr[i].length; j++){
+
+                if(arr[i][j] == 0){
+
+                    zeroCount++;
+
+                }else{
+
+                    nonZeroCount++;
+                }
+            }
+        }
+
+        if(zeroCount > nonZeroCount){
+
+            System.out.println("Sparse Matrix");
+
+        }else{
+
+            System.out.println("Not Sparse Matrix");
+        }
+    }
+}
+
+Output:
+
+Sparse Matrix
+
+Important difference:
+
+Matrix Type	Main Condition
+Identity Matrix	diagonal = 1, others = 0
+Sparse Matrix	mostly zeros
+
+Common beginner mistake:
+
+thinking every sparse matrix is identity matrix
+
+Wrong.
+
+Identity matrix is one specific special matrix. Sparse matrix is just about zero density.

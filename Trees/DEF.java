@@ -15,7 +15,7 @@ public class DEF {
         Tree bst = new Tree();
 
 
-        Inorder(Tree.bst.root);
+       // Inorder(Tree.bst.root);
 
     }
     
